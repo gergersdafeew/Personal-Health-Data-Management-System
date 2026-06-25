@@ -1,0 +1,26 @@
+<view class="page">
+  <view class="logo">
+    <image src="http://codegen.caihongy.cn/20201207/90ac562db6f34fc39a8d2f9bacf47603.png" mode="aspectFill"></image>
+  </view>
+  <view class="form-item">
+    <input class="input" value="{{yonghuzhanghao}}" placeholder="请输入用户账号" data-field="yonghuzhanghao" bindinput="onInput" />
+  </view>
+  <view class="form-item">
+    <input class="input" password value="{{mima}}" placeholder="请输入密码" data-field="mima" bindinput="onInput" />
+  </view>
+  <view class="form-item">
+    <input class="input" value="{{yonghuming}}" placeholder="请输入用户名" data-field="yonghuming" bindinput="onInput" />
+  </view>
+  <view class="form-item">
+    <picker range="{{xingbieOptions}}" value="{{xingbieIndex}}" bindchange="onXingbieChange">
+      <view class="picker">{{xingbie || '请选择性别'}}</view>
+    </picker>
+  </view>
+  <view class="form-item">
+    <input class="input" type="number" value="{{lianxidianhua}}" placeholder="请输入联系电话" data-field="lianxidianhua" bindinput="onInput" />
+  </view>
+  <button class="btn" bindtap="onRegister">注册</button>
+  <view class="links">
+    <text bindtap="goLogin">已有账号？去登录</text>
+  </view>
+</view>

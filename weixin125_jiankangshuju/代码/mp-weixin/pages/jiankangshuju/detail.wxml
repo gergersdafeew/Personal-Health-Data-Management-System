@@ -1,0 +1,36 @@
+<mescroll-uni vue-id="js001-1" up="{{upOption}}" down="{{downOption}}" bottom="{{100}}" data-event-opts="{{[['^init',[['mescrollInit']]],['^down',[['downCallback']]],['^up',[['upCallback']]]]}}" bind:init="__e" bind:down="__e" bind:up="__e" bind:__l="__l" vue-slots="{{['default']}}">
+<view class="container">
+  <view>
+    <swiper class="swiper" indicator-dots="{{true}}" autoplay="{{autoplaySwiper}}" circular="{{true}}" indicator-active-color="rgba(45, 234, 234, 1)" indicator-color="rgba(0, 0, 0, .3)" duration="{{1000}}" interval="{{intervalSwiper}}">
+      <block wx:for="{{swiperList}}" wx:for-item="swiper" wx:for-index="index" wx:key="index">
+        <swiper-item><image mode="aspectFill" src="{{swiper}}"></image></swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="detail-content">
+    <view class="name shop-title">用户名：{{detail.yonghuming}}</view>
+    <view class="detail-list-item"><view class="lable">编号：</view><view class="text">{{detail.bianhao}}</view></view>
+    <view class="detail-list-item"><view class="lable">用户账号：</view><view class="text">{{detail.yonghuzhanghao}}</view></view>
+    <view class="detail-list-item"><view class="lable">联系电话：</view><view class="text">{{detail.lianxidianhua}}</view></view>
+    <view class="detail-list-item"><view class="lable">年龄：</view><view class="text">{{detail.nianling}}</view></view>
+    <view class="detail-list-item"><view class="lable">身高：</view><view class="text">{{detail.shengao}}</view></view>
+    <view class="detail-list-item"><view class="lable">体重：</view><view class="text">{{detail.tizhong}}</view></view>
+    <view class="detail-list-item"><view class="lable">备注：</view><view class="text">{{detail.beizhu}}</view></view>
+    <view class="detail-list-item"><view class="lable">发布时间：</view><view class="text">{{detail.fabushijian}}</view></view>
+  </view>
+  <view class="time-content">
+    <view class="header">饮食习惯</view>
+    <view class="content">{{detail.yinshixiguan}}</view>
+  </view>
+  <view class="time-content">
+    <view class="header">运动习惯</view>
+    <view class="content">{{detail.yundongxiguan}}</view>
+  </view>
+  <view class="bottom-content cu-bar bg-white tabbar border shop">
+    <view style="text-align:left;display:flex;"></view>
+    <view style="text-align:right;">
+      <button class="cu-btn bg-brown round shadow-blur" style="background-color:#409EFF;color:#fff;" data-event-opts="{{[['tap',[['onAcrossTap',['shujufenxi']]]]]}}" bindtap="__e">分析</button>
+    </view>
+  </view>
+</view>
+</mescroll-uni>

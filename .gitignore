@@ -1,0 +1,24 @@
+# Build outputs
+**/target/
+**/node_modules/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Logs & temp
+*.log
+*.tmp
+*.swp
+
+# Local database config (contains password)
+**/config.properties
+
+# Maven wrapper local (optional)
+.mvn/wrapper/maven-wrapper.jar

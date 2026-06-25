@@ -1,0 +1,75 @@
+<mescroll-uni vue-id="18202232-1" up="{{upOption}}" down="{{downOption}}" bottom="{{100}}" data-event-opts="{{[['^init',[['mescrollInit']]],['^down',[['downCallback']]],['^up',[['upCallback']]]]}}" bind:init="__e" bind:down="__e" bind:up="__e" bind:__l="__l" vue-slots="{{['default']}}">
+<view class="container">
+  <view>
+    <swiper class="swiper" indicator-dots="{{true}}" autoplay="{{autoplaySwiper}}" circular="{{true}}" indicator-active-color="rgba(45, 234, 234, 1)" indicator-color="rgba(0, 0, 0, .3)" duration="{{1000}}" interval="{{intervalSwiper}}">
+      <block wx:for="{{swiperList}}" wx:for-item="swiper" wx:for-index="index" wx:key="index">
+        <swiper-item><image mode="aspectFill" src="{{swiper}}"></image></swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="detail-content">
+    <view class="name shop-title">标题：{{detail.biaoti}}</view>
+    <view class="detail-list-item">
+      <view class="lable">发布时间：</view>
+      <view class="text">{{detail.fabushijian}}</view>
+    </view>
+    <view class="detail-list-item">
+      <view class="lable">更新时间：</view>
+      <view class="text">{{detail.gengxinshijian}}</view>
+    </view>
+    <view class="video-section" wx:if="{{videoUrl}}">
+      <view class="section-label">视频介绍</view>
+      <video class="intro-video" src="{{videoUrl}}" controls show-center-play-btn show-mute-btn enable-progress-gesture vslide-gesture-in-fullscreen="{{true}}" object-fit="contain" poster="{{swiperList[0]}}" title="{{detail.biaoti}}"></video>
+      <view class="video-tip">提示：小程序视频无音量滑条，请用手机侧边音量键调节；全屏时可上下滑动调节音量。部分素材为无声视频。</view>
+    </view>
+    <view class="detail-list-item" wx:elif="{{videoDesc}}">
+      <view class="lable">视频介绍：</view>
+      <view class="text">{{videoDesc}}</view>
+    </view>
+    <view class="detail-list-item">
+      <view class="lable">点击次数：</view>
+      <view class="text">{{detail.clicknum}}</view>
+    </view>
+    <view class="detail-list-item favor">
+      <view class="lable">赞：{{detail.thumbsupnum}}</view>
+      <image class="icon" src="../../static/gen/zan.png" mode="aspectFit" data-event-opts="{{[['tap',[['zan',['$event']]]]]}}" bindtap="__e"></image>
+    </view>
+    <view class="detail-list-item favor">
+      <view class="lable">踩：{{detail.crazilynum}}</view>
+      <image class="icon" src="../../static/gen/cai.png" mode="aspectFit" data-event-opts="{{[['tap',[['cai',['$event']]]]]}}" bindtap="__e"></image>
+    </view>
+  </view>
+  <view class="time-content">
+    <view class="header">详细内容</view>
+    <view class="content">
+      <rich-text nodes="{{detail.xiangxineirong}}"></rich-text>
+    </view>
+  </view>
+  <view class="time-content">
+    <view class="comoment-header">
+      <view>评论</view>
+      <view data-event-opts="{{[['tap',[['onCommentTap',['$event']]]]]}}" class="btn-comment-content" bindtap="__e">
+        <view class="cuIcon-add"></view>添加评论
+      </view>
+    </view>
+    <view class="cu-list comment">
+      <block wx:for="{{commentList}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+        <view class="cu-item comment-item">
+          <view class="content">
+            <view class="text-grey">{{item.nickname}}</view>
+            <view class="text-gray text-content text-df content">{{item.content}}</view>
+            <view class="margin-top-sm text-gray text-df">{{item.addtime}}</view>
+            <block wx:if="{{item.reply}}">
+              <view class="text-gray text-content text-df content">回复:{{item.reply}}</view>
+            </block>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class="bottom-content cu-bar bg-white tabbar border shop">
+    <view style="text-align:left;display:flex;"></view>
+    <view style="text-align:right;"></view>
+  </view>
+</view>
+</mescroll-uni>

@@ -1,0 +1,100 @@
+.page {
+  min-height: 100vh;
+  background: #f5f7fa;
+  padding: 24rpx;
+  box-sizing: border-box;
+}
+
+.form-card {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 8rpx 24rpx;
+  margin-bottom: 32rpx;
+}
+
+.form-item {
+  display: flex;
+  align-items: center;
+  min-height: 96rpx;
+  border-bottom: 1rpx solid #eee;
+  padding: 12rpx 0;
+}
+
+.form-item:last-child {
+  border-bottom: none;
+}
+
+.label {
+  width: 160rpx;
+  font-size: 28rpx;
+  color: #606266;
+  flex-shrink: 0;
+}
+
+.input, .picker {
+  flex: 1;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.readonly {
+  color: #999;
+}
+
+.status {
+  font-size: 26rpx;
+  padding: 6rpx 20rpx;
+  border-radius: 20rpx;
+}
+
+.status.normal {
+  color: #67c23a;
+  background: #f0f9eb;
+}
+
+.status.disabled {
+  color: #f56c6c;
+  background: #fef0f0;
+}
+
+.avatar-item {
+  align-items: flex-start;
+  padding-top: 24rpx;
+  padding-bottom: 24rpx;
+}
+
+.avatar-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  background: #eee;
+}
+
+.avatar-tip {
+  margin-top: 12rpx;
+  font-size: 24rpx;
+  color: #909399;
+}
+
+.btn {
+  margin-top: 24rpx;
+  border-radius: 44rpx;
+  font-size: 30rpx;
+}
+
+.btn.primary {
+  background: #4ad1f2;
+  color: #fff;
+}
+
+.btn.logout {
+  background: #fff;
+  color: #f56c6c;
+  border: 1rpx solid #fbc4c4;
+}

@@ -1,0 +1,11 @@
+<view class="content">
+<form class="app-update-pv">
+  <view class="cu-form-group"><view class="title">标题</view><input placeholder="标题" data-event-opts="{{[['input',[['__set_model',['$0','biaoti','$event',[]],['ruleForm']]]]]}}" value="{{ruleForm.biaoti}}" bindinput="__e"/></view>
+  <view class="cu-form-group" data-event-opts="{{[['tap',[['fengmianTap']]]]}}" bindtap="__e"><view class="title">封面</view><view class="right-input"><image class="avator" wx:if="{{ruleForm.fengmian}}" src="{{ruleForm.fengmian}}" mode="aspectFill"></image><image class="avator" wx:else src="../../static/gen/upload.png" mode="aspectFill"></image></view></view>
+  <view class="cu-form-group"><view class="title">视频介绍</view><input placeholder="视频URL或简介" data-event-opts="{{[['input',[['__set_model',['$0','shipinjieshao','$event',[]],['ruleForm']]]]]}}" value="{{ruleForm.shipinjieshao}}" bindinput="__e"/></view>
+  <view class="cu-form-group"><view class="title">发布时间</view><input placeholder="发布时间" data-event-opts="{{[['input',[['__set_model',['$0','fabushijian','$event',[]],['ruleForm']]]]]}}" value="{{ruleForm.fabushijian}}" bindinput="__e"/></view>
+  <view class="cu-form-group"><view class="title">更新时间</view><input placeholder="更新时间" data-event-opts="{{[['input',[['__set_model',['$0','gengxinshijian','$event',[]],['ruleForm']]]]]}}" value="{{ruleForm.gengxinshijian}}" bindinput="__e"/></view>
+  <view class="cu-form-group"><view class="title">详细内容</view><textarea placeholder="详细内容" data-event-opts="{{[['input',[['__set_model',['$0','xiangxineirong','$event',[]],['ruleForm']]]]]}}" value="{{ruleForm.xiangxineirong}}" bindinput="__e"></textarea></view>
+  <view class="btn"><button class="bg-red" style="background-color:#409EFF;color:#fff;width:80%;" data-event-opts="{{[['tap',[['onSubmitTap']]]]}}" bindtap="__e">提交</button></view>
+</form>
+</view>

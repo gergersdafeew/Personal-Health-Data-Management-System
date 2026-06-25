@@ -1,0 +1,56 @@
+<view class="content">
+  <view class="header" bindtap="goUserInfo">
+    <view class="userinfo">
+      <image class="face" src="{{user.gerentouxiang || '/static/center/face.jpeg'}}" mode="aspectFill"></image>
+      <view class="info">
+        <view class="username">{{user.yonghuming || user.yonghuzhanghao || '未登录'}}</view>
+        <view class="sub">{{user.yonghuzhanghao || '点击登录账号'}}</view>
+        <view class="status-tag {{user.zhuangtai === '禁用' ? 'disabled' : 'normal'}}">{{user.zhuangtai || '正常'}}</view>
+      </view>
+    </view>
+    <view class="edit-tip">编辑资料 ></view>
+  </view>
+
+  <view class="quick-grid">
+    <view class="quick-item" bindtap="goPage" data-url="/pages/jiankangshuju/list">
+      <text class="quick-icon">📊</text>
+      <text>健康数据</text>
+    </view>
+    <view class="quick-item" bindtap="goPage" data-url="/pages/jiankangjihua/list">
+      <text class="quick-icon">📋</text>
+      <text>健康计划</text>
+    </view>
+    <view class="quick-item" bindtap="goPage" data-url="/pages/jiankangxinxigongxiang/list">
+      <text class="quick-icon">🤝</text>
+      <text>健康共享</text>
+    </view>
+    <view class="quick-item" bindtap="goPage" data-url="/pages/shujufenxi/list">
+      <text class="quick-icon">📈</text>
+      <text>数据分析</text>
+    </view>
+  </view>
+
+  <view class="section-title">我的服务</view>
+  <view class="list">
+    <block wx:for="{{menuItems}}" wx:key="tableName">
+      <view class="li" hover-class="hover" bindtap="goPage" data-url="/pages/{{item.tableName}}/list?userid={{user.id}}">
+        <view class="text">{{item.menu}}</view>
+        <view class="arrow">></view>
+      </view>
+    </block>
+    <view class="li" hover-class="hover" bindtap="goPage" data-url="/pages/forum-add-or-update/forum-add-or-update">
+      <view class="text">我要发贴</view>
+      <view class="arrow">></view>
+    </view>
+    <view class="li" hover-class="hover" bindtap="goPage" data-url="/pages/forum-my/forum-my">
+      <view class="text">我的发贴</view>
+      <view class="arrow">></view>
+    </view>
+    <view class="li" hover-class="hover" bindtap="goUserInfo">
+      <view class="text">个人信息</view>
+      <view class="arrow">></view>
+    </view>
+  </view>
+
+  <button class="logout-btn" bindtap="onLogout">退出登录</button>
+</view>

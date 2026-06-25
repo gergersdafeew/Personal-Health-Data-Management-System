@@ -1,0 +1,46 @@
+.page {
+  padding: 60rpx 80rpx;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background: #f8f8f8;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 60rpx;
+}
+
+.logo image {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 40rpx;
+  border: 2rpx solid #4ad1f2;
+}
+
+.form-item {
+  margin-bottom: 32rpx;
+}
+
+.input, .picker {
+  background: rgba(135, 128, 128, 0.15);
+  border-radius: 40rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  padding: 0 32rpx;
+  font-size: 28rpx;
+}
+
+.btn {
+  margin-top: 40rpx;
+  background: #4ad1f2;
+  color: #473d44;
+  border-radius: 40rpx;
+  font-size: 32rpx;
+}
+
+.links {
+  text-align: center;
+  margin-top: 40rpx;
+  font-size: 26rpx;
+  color: #26c848;
+}

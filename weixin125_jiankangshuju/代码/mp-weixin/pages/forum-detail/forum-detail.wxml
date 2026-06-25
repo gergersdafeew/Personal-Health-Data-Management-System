@@ -1,0 +1,27 @@
+<view class="container">
+  <view class="post-card" wx:if="{{detail.id}}">
+    <view class="post-title">{{detail.title}}</view>
+    <view class="post-meta">
+      <text>发布人：{{detail.username}}</text>
+      <text>{{detail.addtime}}</text>
+    </view>
+    <view class="post-content">{{detail.content}}</view>
+    <view class="post-status" wx:if="{{detail.isdone}}">状态：{{detail.isdone}}</view>
+  </view>
+
+  <view class="reply-section">
+    <view class="section-title">全部回复（{{childs.length}}）</view>
+    <block wx:for="{{childs}}" wx:key="id">
+      <view class="reply-item">
+        <view class="reply-user">{{item.username}}</view>
+        <view class="reply-time">{{item.addtime}}</view>
+        <view class="reply-content">{{item.content}}</view>
+      </view>
+    </block>
+    <view class="empty-reply" wx:if="{{childs.length===0}}">暂无回复，快来抢沙发吧~</view>
+  </view>
+
+  <view class="bottom-bar">
+    <button class="reply-btn" bindtap="onReplyTap">回复帖子</button>
+  </view>
+</view>

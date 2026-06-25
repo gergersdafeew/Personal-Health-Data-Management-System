@@ -1,0 +1,17 @@
+<view class="content">
+<form class="app-update-pv">
+  <view class="cu-form-group"><view class="title">编号</view><view class="right-input">{{ruleForm.bianhao}}</view></view>
+  <view class="cu-form-group"><view class="title">用户账号</view><input disabled="{{ro.yonghuzhanghao}}" placeholder="用户账号" data-event-opts="{{[['input',[['__set_model',['$0','yonghuzhanghao','$event',[]],['ruleForm']]]]]}}" value="{{ruleForm.yonghuzhanghao}}" bindinput="__e"/></view>
+  <view class="cu-form-group"><view class="title">用户名</view><input disabled="{{ro.yonghuming}}" placeholder="用户名" data-event-opts="{{[['input',[['__set_model',['$0','yonghuming','$event',[]],['ruleForm']]]]]}}" value="{{ruleForm.yonghuming}}" bindinput="__e"/></view>
+  <view class="cu-form-group"><view class="title">联系电话</view><input disabled="{{ro.lianxidianhua}}" placeholder="联系电话" data-event-opts="{{[['input',[['__set_model',['$0','lianxidianhua','$event',[]],['ruleForm']]]]]}}" value="{{ruleForm.lianxidianhua}}" bindinput="__e"/></view>
+  <view class="cu-form-group" data-event-opts="{{[['tap',[['gerentouxiangTap']]]]}}" bindtap="__e"><view class="title">个人头像</view><view class="right-input"><image class="avator" wx:if="{{ruleForm.gerentouxiang}}" src="{{ruleForm.gerentouxiang}}" mode="aspectFill"></image><image class="avator" wx:else src="../../static/gen/upload.png" mode="aspectFill"></image></view></view>
+  <view class="cu-form-group"><view class="title">年龄</view><input disabled="{{ro.nianling}}" placeholder="年龄" data-event-opts="{{[['input',[['__set_model',['$0','nianling','$event',[]],['ruleForm']]]]]}}" value="{{ruleForm.nianling}}" bindinput="__e"/></view>
+  <view class="cu-form-group"><view class="title">身高</view><input disabled="{{ro.shengao}}" placeholder="身高" data-event-opts="{{[['input',[['__set_model',['$0','shengao','$event',[]],['ruleForm']]]]]}}" value="{{ruleForm.shengao}}" bindinput="__e"/></view>
+  <view class="cu-form-group"><view class="title">体重</view><input disabled="{{ro.tizhong}}" placeholder="体重" data-event-opts="{{[['input',[['__set_model',['$0','tizhong','$event',[]],['ruleForm']]]]]}}" value="{{ruleForm.tizhong}}" bindinput="__e"/></view>
+  <view class="cu-form-group"><view class="title">备注</view><input disabled="{{ro.beizhu}}" placeholder="备注" data-event-opts="{{[['input',[['__set_model',['$0','beizhu','$event',[]],['ruleForm']]]]]}}" value="{{ruleForm.beizhu}}" bindinput="__e"/></view>
+  <view class="cu-form-group"><view class="title">发布时间</view><input placeholder="发布时间" data-event-opts="{{[['input',[['__set_model',['$0','fabushijian','$event',[]],['ruleForm']]]]]}}" value="{{ruleForm.fabushijian}}" bindinput="__e"/></view>
+  <view class="cu-form-group"><view class="title">饮食习惯</view><textarea placeholder="饮食习惯" data-event-opts="{{[['input',[['__set_model',['$0','yinshixiguan','$event',[]],['ruleForm']]]]]}}" value="{{ruleForm.yinshixiguan}}" bindinput="__e"></textarea></view>
+  <view class="cu-form-group"><view class="title">运动习惯</view><textarea placeholder="运动习惯" data-event-opts="{{[['input',[['__set_model',['$0','yundongxiguan','$event',[]],['ruleForm']]]]]}}" value="{{ruleForm.yundongxiguan}}" bindinput="__e"></textarea></view>
+  <view class="btn"><button class="bg-red" style="background-color:#409EFF;color:#fff;width:80%;" data-event-opts="{{[['tap',[['onSubmitTap']]]]}}" bindtap="__e">提交</button></view>
+</form>
+</view>

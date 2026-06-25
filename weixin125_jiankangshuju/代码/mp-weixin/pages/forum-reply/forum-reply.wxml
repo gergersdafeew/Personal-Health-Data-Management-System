@@ -1,0 +1,10 @@
+<view class="container my-publish-pv">
+<form>
+  <view class="cu-form-group margin-top">
+    <textarea style="height:300rpx;" placeholder="请输入回复内容" data-event-opts="{{[['input',[['__set_model',['$0','content','$event',[]],['forum']]]]]}}" value="{{forum.content}}" bindinput="__e"></textarea>
+  </view>
+  <view class="cu-form-group margin-top" style="text-align:center;">
+    <button class="bg-red margin-tb-sm" style="background-color:#409EFF;color:#fff;width:100%;" data-event-opts="{{[['tap',[['onSubmitTap']]]]}}" bindtap="__e">提交回复</button>
+  </view>
+</form>
+</view>
