@@ -2,6 +2,8 @@
 
 基于微信小程序 + Spring Boot + Vue 管理后台的个人健康数据管理系统。
 
+> 仓库地址：https://github.com/gergersdafeew/Personal-Health-Data-Management-System
+
 ## 技术栈
 
 - 后端：Java Spring Boot（`ssmxynp9`）
